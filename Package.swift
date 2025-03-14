@@ -104,6 +104,8 @@ let package = Package(
             ],
 
             cxxSettings: [
+                .define("MLX_METAL_DEBUG")
+                
                 .headerSearchPath("mlx"),
                 .headerSearchPath("mlx-c"),
                 .headerSearchPath("metal-cpp"),
