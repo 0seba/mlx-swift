@@ -104,18 +104,18 @@ let package = Package(
             ],
 
             cxxSettings: [
-                .define("MLX_METAL_DEBUG")
-                
                 .headerSearchPath("mlx"),
                 .headerSearchPath("mlx-c"),
                 .headerSearchPath("metal-cpp"),
                 .headerSearchPath("json/single_include/nlohmann"),
                 .headerSearchPath("fmt/include"),
 
+                
                 .define("ACCELERATE_NEW_LAPACK"),
                 .define("_METAL_"),
                 .define("SWIFTPM_BUNDLE", to: "\"mlx-swift_Cmlx\""),
                 .define("METAL_PATH", to: "\"default.metallib\""),
+                .define("MLX_METAL_DEBUG")
             ],
             linkerSettings: [
                 .linkedFramework("Foundation"),
